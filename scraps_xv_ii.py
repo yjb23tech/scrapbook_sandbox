@@ -21,6 +21,9 @@ print("\nChoose your weapon Warrior:\n")
 
 while ui_bool_weapon_selection == False:
 
+    #Option 1: var_weapons_chest_counter is a global variable so each time we got to the top of the while loop, prior to the line below existing, the accrued changes to the variable would persist
+    #This meant instead of showing the values we wanted, following the first iteration of the loop, the menu buttons did not correlate to the position of the weapons as originally intended 
+    #Solution? After that first while loop iteration, reset the global variable back to the initial desired start value - that way it works as intended
     var_weapons_chest_counter = 1 
 
     for weapon in arr_weapons_chest:
