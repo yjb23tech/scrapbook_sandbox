@@ -66,3 +66,4 @@ else:
 
 print("\nEnd")
 
+print("Renewing my dedication to the grind")
