@@ -21,7 +21,7 @@ ui_string_ready_to_order = input("\nY'right darling? Ready to order sum?\n")
 
 #A better approach to the above is to have the stored ui var immediately converted into lowercase and then compared against the lower case version of the desired input answer 
 #So here we use the .lower() method 
-if ((ui_string_ready_to_order.lower()) == "yes"):
+if ((ui_string_ready_to_order.lower()) == "yes") or ((ui_string_ready_to_order.lower()) == 'y'):
     print("Haile Selassie!")
     ui_bool_ready_to_order = True 
 else:
@@ -40,8 +40,6 @@ while (ui_bool_ready_to_order == True):
 
     if (ui_int_selected_food_main <= 2) or (ui_int_selected_food_main >= 4):
         print("WE NUH HAVE DAT! ORDER AGAIN AND MEK IT RIGHT\n")
-        true_local_var = 29
-        print(f"Bando baby {true_local_var}")
         continue
     else:
         print(f"You've chosen option {ui_int_selected_food_main}")
@@ -59,6 +57,5 @@ while (ui_bool_ready_to_order == True):
         print("It was a pleasure to serve you XD")
         ui_bool_ready_to_order = False
 
-print(f"Local variables say whaaaaaaa {true_local_var}")
 print("\nEnd\n")
 
