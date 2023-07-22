@@ -16,28 +16,31 @@ arr_heroes_marvel = ['Iron Man', 'Spider Man', 'Mr Fantastic', 'Black Panther', 
 arr_heroes_dc = ['Batman', 'Super Man', 'Cyborg', 'The Flash', 'Wonder Woman'] 
 arr_heroes_winners = [] 
 
-print("\nFrom the Marvel Universe:\n")
-for hero_marvel in arr_heroes_marvel:
-    print(f"You can choose: {hero_marvel}")
+while (len(arr_heroes_winners) < 5):
 
-print("\nAnd from the DC Universe:\n")
-for hero_dc in arr_heroes_dc:
-    print(f"You can choose: {hero_dc}")
+    print("\nFrom the Marvel Universe:\n")
+    for hero_marvel in arr_heroes_marvel:
+        print(f"You can choose: {hero_marvel}")
+
+    print("\nAnd from the DC Universe:\n")
+    for hero_dc in arr_heroes_dc:
+        print(f"You can choose: {hero_dc}")
 
 
-ui_hero_marvel_selection = input("\nChoose your Warrior from the Marvel Universe:\n")
-ui_hero_dc_selection = input("\nChoose your Warrior from the DC Universe:\n")
+    ui_hero_marvel_selection = input("\nChoose your Warrior from the Marvel Universe:\n")
+    ui_hero_dc_selection = input("\nChoose your Warrior from the DC Universe:\n")
 
-print("\nFIGHT\n") 
+    print("\nFIGHT\n") 
 
-hero_marvel_loc = (arr_heroes_marvel.index(ui_hero_marvel_selection)) + 1
-hero_dc_loc = (arr_heroes_dc.index(ui_hero_dc_selection)) + 1 
+    hero_marvel_loc = (arr_heroes_marvel.index(ui_hero_marvel_selection)) + 1
+    hero_dc_loc = (arr_heroes_dc.index(ui_hero_dc_selection)) + 1 
 
-fight(hero_marvel_loc, hero_dc_loc, arr_heroes_marvel, arr_heroes_dc, arr_heroes_winners)
+    fight(hero_marvel_loc, hero_dc_loc, arr_heroes_marvel, arr_heroes_dc, arr_heroes_winners)
+
 
 print(f"\nAfter Round 1, your Winners are:\n")
 
 for winner in arr_heroes_winners:
-    print(f"\nSalutations {winner}")
+    print(f"Salutations {winner}")
 
 
