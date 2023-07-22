@@ -1,1 +1,0 @@
-print("Shoot around warmups")
