@@ -4,8 +4,13 @@
 def fight(var_hero_marvel_loc, var_hero_dc_loc, arr_marvel, arr_dc, arr_cross_winners):
 
     if (var_hero_marvel_loc > var_hero_dc_loc):
-        print(f"\nAnd your Winner by knockout is {(arr_marvel[var_hero_marvel_loc - 1])}\n")
-        arr_cross_winners.append((arr_marvel[var_hero_marvel_loc - 1]))
+        #print(f"\nAnd your Winner by knockout is {(arr_marvel[var_hero_marvel_loc - 1])}\n")
+        #arr_cross_winners.append((arr_marvel[var_hero_marvel_loc - 1]))
+
+        marvel_winner = arr_marvel.pop((var_hero_marvel_loc) - 1)
+        print(f"And your Winner by knockout is {marvel_winner}")
+        arr_cross_winners.append(marvel_winner)
+
     elif (var_hero_marvel_loc == var_hero_dc_loc):
         print("The heroes from both Universes are equally matched: it is a TIE!")
     else:
