@@ -1,14 +1,14 @@
 #print("\nWarm Ups\n")
 #I wanna put the User in a position whereby they end up creating two new arrays: the winner's bracket and the loser's bracket 
 
-def fight(var_hero_marvel_loc, var_hero_dc_loc):
+def fight(var_hero_marvel_loc, var_hero_dc_loc, arr_marvel, arr_dc):
 
     if (var_hero_marvel_loc > var_hero_dc_loc):
-        print("Marvel is the winner!")
+        print(f"\nAnd your Winner by knockout is {(arr_marvel[var_hero_marvel_loc - 1])}\n")
     elif (var_hero_marvel_loc == var_hero_dc_loc):
         print("The heroes from both Universes are equally matched: it is a TIE!")
     else:
-        print("DC is the winner!")     
+        print(f"\nIn a shocking upset your Winner is {(arr_dc[var_hero_dc_loc - 1])}\n")     
 
 arr_heroes_marvel = ['Iron Man', 'Spider Man', 'Mr Fantastic', 'Black Panther', 'Storm'] 
 arr_heroes_dc = ['Batman', 'Super Man', 'Cyborg', 'The Flash', 'Wonder Woman'] 
@@ -30,5 +30,5 @@ print("\nFIGHT\n")
 hero_marvel_loc = (arr_heroes_marvel.index(ui_hero_marvel_selection)) + 1
 hero_dc_loc = (arr_heroes_dc.index(ui_hero_dc_selection)) + 1 
 
-fight(hero_marvel_loc, hero_dc_loc)
+fight(hero_marvel_loc, hero_dc_loc, arr_heroes_marvel, arr_heroes_dc)
 
