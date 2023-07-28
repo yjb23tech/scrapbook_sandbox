@@ -17,7 +17,8 @@ def play():
         for x, action in enumerate(arr_action_options, 1):
             print(f"{x}. Press {action}")
 
-        ui_action_test = input("\nWhat is your chosen action Pirate?\n")
+        ui_action_test = get_user_input() 
+        #input("\nWhat is your chosen action Pirate?\n")
         
         #Whole words, letters, symbols 
         if ui_action_test in ['North', 'north', 'N', 'n', '^']:
@@ -45,5 +46,8 @@ def play():
             print("\nYou have not chosen a valid action; try again!\n")
 
     print(" ")
+
+def get_user_input():
+    return input("\nWhat is your chosen action Pirate?\n")
 
 play() 
