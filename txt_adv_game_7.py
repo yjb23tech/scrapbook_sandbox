@@ -18,7 +18,6 @@ def play():
             print(f"{x}. Press {action}")
 
         ui_action_test = get_user_input() 
-        #input("\nWhat is your chosen action Pirate?\n")
         
         #Whole words, letters, symbols 
         if ui_action_test in ['North', 'north', 'N', 'n', '^']:
