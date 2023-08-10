@@ -1,23 +1,32 @@
 #print("Welcome Back")
 
-class BroadSword:
+#A dash of OOP; tested - it bloody works! 
+#Essentially, any subclass that inherits from the parent class can pull down so to speak the methods i.e. behaviours of the parent class and use them 
+#The Parent class does not have the properties name, description, damage but when the str() is pulled down into the subclass, these properties are filled in by the subclass
+#Probably more to learn here but an interesting outcome nontheless! 
+
+class Weapon:
+    def __str__(self):
+        return (f"This is the {self.name}! It is {self.description} with a dangerous attack damage of {self.damage} - gear up!")
+
+class BroadSword(Weapon):
     def __init__(self):
         self.name = "Broad Sword"
         self.description = "your strongest and most deadly weapon"
         self.damage = 1_000_000
 
     #This works; well done
-    def __str__(self):
-        return (f"This is the {self.name}! It is {self.description} with an attack damage of {self.damage} - weilder beware!")
+    #def __str__(self):
+        #return (f"This is the {self.name}! It is {self.description} with an attack damage of {self.damage} - weilder beware!")
 
-class Dagger:
+class Dagger(Weapon):
     def __init__(self):
         self.name = "Dagger"
         self.description = "excellent for close combat and stealth activities"
         self.damage = 1_000
 
-    def __str__(self):
-        return (f"This is the {self.name}! It is {self.description} and has an attack damage of {self.damage} - may your foes quake in terror when you unsheath it!")
+    #def __str__(self):
+        #return (f"This is the {self.name}! It is {self.description} and has an attack damage of {self.damage} - may your foes quake in terror when you unsheath it!")
 
 
 #This works; well done
