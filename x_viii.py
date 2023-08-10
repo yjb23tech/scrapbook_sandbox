@@ -16,16 +16,23 @@ def play():
 
         ui_action = get_user_input()
 
-        if ui_action in ['North', 'NORTH', 'N', 'n', '^']:
+        if ui_action in ['North', 'NORTH', 'north', 'N', 'n', '^']:
             print("\nYou're now travelling North!\n")
-        elif ui_action in ['East', 'EAST', 'E', 'e', '>']:
+        elif ui_action in ['East', 'EAST', 'east', 'E', 'e', '>']:
             print("\nYou're now travelling East!\n")
-        elif ui_action in ['South', 'SOUTH', 'S', 's', 'v']:
+        elif ui_action in ['South', 'SOUTH', 'south', 'S', 's', 'v']:
             print("\nYou're now travelling South!\n")
-        elif ui_action in ['West', 'WEST', 'W', 'w', '<']:
+        elif ui_action in ['West', 'WEST', 'west', 'W', 'w', '<']:
             print("\nYou're now travelling West!\n")
-        else:
+        elif ui_action in ['Inventory', 'INVENTORY', 'inventory', 'I', 'i']:
+            print("\nYou've now accessed the inventory where you have access to the following items:\n")
+            for item in arr_inventory_items:
+                print(f"{(arr_inventory_items.index(item) + 1)}. {item}")
+            print(" ")
+        elif ui_action in ['Quit', 'QUIT', 'quit', 'Q', 'q']:
             print("\nYou have now saved and quit the game: well done Captain\n")
             bool_game_is_on = False 
+        else:
+            print("\nYour input has not been recognised; try again\n")
 
 play()
