@@ -1,6 +1,17 @@
 #print("Welcome Back")
 
-arr_inventory_items = ['Gold(5)', 'Broad Sword', 'Medicine', 'Iron', 'Potions'] 
+class BroadSword:
+    def __init__(self):
+        self.name = "Broad Sword"
+        self.description = "your strongest and most deadly weapon"
+        self.damage = 1_000_000
+
+    #This works; well done
+    def __str__(self):
+        return (f"This is the {self.name}! It is {self.description} with an attack damage of {self.damage} - weilder beware!")
+
+#This works; well done
+arr_inventory_items = ['Gold(5)', BroadSword(), 'Medicine', 'Iron', 'Potions'] 
 arr_action_options = ['N to travel North', 'E to travel East', 'S to travel South', 'W to travel West', 'I to access the items in your Inventory', 'Q to save and Quit the game'] 
 
 def get_user_input():
