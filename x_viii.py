@@ -16,8 +16,14 @@ def play():
 
         ui_action = get_user_input()
 
-        if ui_action == 'A':
-            print("\nGood so far\n")
+        if ui_action in ['North', 'NORTH', 'N', 'n', '^']:
+            print("\nYou're now travelling North!\n")
+        elif ui_action in ['East', 'EAST', 'E', 'e', '>']:
+            print("\nYou're now travelling East!\n")
+        elif ui_action in ['South', 'SOUTH', 'S', 's', 'v']:
+            print("\nYou're now travelling South!\n")
+        elif ui_action in ['West', 'WEST', 'W', 'w', '<']:
+            print("\nYou're now travelling West!\n")
         else:
             print("\nYou have now saved and quit the game: well done Captain\n")
             bool_game_is_on = False 
