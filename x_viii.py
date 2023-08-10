@@ -10,8 +10,18 @@ class BroadSword:
     def __str__(self):
         return (f"This is the {self.name}! It is {self.description} with an attack damage of {self.damage} - weilder beware!")
 
+class Dagger:
+    def __init__(self):
+        self.name = "Dagger"
+        self.description = "excellent for close combat and stealth activities"
+        self.damage = 1_000
+
+    def __str__(self):
+        return (f"This is the {self.name}! It is {self.description} and has an attack damage of {self.damage} - may your foes quake in terror when you unsheath it!")
+
+
 #This works; well done
-arr_inventory_items = ['Gold(5)', BroadSword(), 'Medicine', 'Iron', 'Potions'] 
+arr_inventory_items = ['Gold(5)', BroadSword(), Dagger(), 'Medicine', 'Magic Potions', 'Iron'] 
 arr_action_options = ['N to travel North', 'E to travel East', 'S to travel South', 'W to travel West', 'I to access the items in your Inventory', 'Q to save and Quit the game'] 
 
 def get_user_input():
