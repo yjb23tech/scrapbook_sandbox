@@ -21,3 +21,14 @@ for x, hero in enumerate(arr_bleach_heroes, 1):
 
 print(" ")
 
+warrior_counter = 1 
+arr_naruto_heroes = ['Haku', 'Zabuza', 'Raikage', 'Yondaime'] 
+
+for hero in arr_naruto_heroes:
+    print(f"And next to the stage we have {warrior_counter}. {hero}")
+    warrior_counter += 1 
+
+print(" ")
+
+
+
