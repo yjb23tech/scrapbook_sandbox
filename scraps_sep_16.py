@@ -54,4 +54,21 @@ for warrior in ui_arr_warrior_collection:
 
 print(" ")
 
+#FIGHT SCHOOL 
+
+print("Choose your warriors!\n")
+
+ui_warrior_1 = input("Who will your first warrior be?\n")
+ui_warrior_2 = input("Who will your second warrior be?\n")
+
+if (arr_marvel_heroes.index(ui_warrior_1) > arr_dc_heroes.index(ui_warrior_2)):
+    print(f"In the battle between good and evil we have a winner! The victor is {ui_warrior_1}!")
+elif (arr_marvel_heroes.index(ui_warrior_1) < arr_dc_heroes.index(ui_warrior_2)):
+    print(f"It cannot be! In the battle between good and evil the villain has come out on top! The victor is {ui_warrior_2}!")
+elif (arr_marvel_heroes.index(ui_warrior_1) == arr_dc_heroes.index(ui_warrior_2)):
+    print("We have a tie!")
+else:
+    print("And the winner is... no one?")
+
+
 
