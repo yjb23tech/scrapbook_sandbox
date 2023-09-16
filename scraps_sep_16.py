@@ -36,10 +36,14 @@ print(" ")
 
 #Build your own warrior list 
 
+#A CONSTANT
 MAX_WARRIOR_LIST_SIZE = 5 
 
+#AN EMPTY ARR WITH LEN AKA SIZE '0' 
 ui_arr_warrior_collection = [] 
 
+#Standard 'while' loop where initial condition checked is the size of the arr; loop will run if size of arr is < 5; size of arr increases each run of loop and size is checked each iteration 
+#Use of append function on the arr works to increase the LEN aka SIZE of the arr 
 while (len(ui_arr_warrior_collection) < MAX_WARRIOR_LIST_SIZE):
     ui_warrior = input("\nPlease enter the name of your warrior:\n")
     ui_arr_warrior_collection.append(ui_warrior)
