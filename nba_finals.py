@@ -54,6 +54,36 @@ def play():
     print(arr_nba_west_coast_team)
     print(" ")
 
+    while ((len(arr_nba_east_coast_team) > 0) and (len(arr_nba_west_coast_team) > 0)):
+
+        print(arr_nba_east_coast_team)
+        print(arr_nba_west_coast_team)
+        print(" ")
+
+        ui_nba_east_coast_player = input("\nChoose a player from your East Coast team:\n")
+        ui_nba_west_coast_player = input("\nChoose a player from your West Coast team:\n")
+
+        ui_nba_east_coast_player_rank = arr_nba_east_coast_team.index(ui_nba_east_coast_player)
+        ui_nba_west_coast_player_rank = arr_nba_west_coast_team.index(ui_nba_west_coast_player)
+
+        if (ui_nba_east_coast_player_rank > ui_nba_west_coast_player_rank):
+            print(f"{ui_nba_east_coast_player} went head to head with {ui_nba_west_coast_player} and dunked all over him!")
+            ui_nba_west_coast_player_removal = arr_nba_west_coast_team.pop(ui_nba_west_coast_player_rank)
+            print(f"{ui_nba_west_coast_player_removal} is out XD")
+
+        elif (ui_nba_east_coast_player_rank < ui_nba_west_coast_player_rank):
+            print(f"{ui_nba_west_coast_player} absolutely posterized {ui_nba_east_coast_player} with no regard for human LIFE")
+            ui_nba_east_coast_player_removal = arr_nba_east_coast_team.pop(ui_nba_east_coast_player_rank)
+            print(f"{ui_nba_east_coast_player_removal} is out XD")
+
+        elif (ui_nba_east_coast_player_rank == ui_nba_west_coast_player_rank):
+            print("Players are tied! Try again XD")
+
+        else:
+            print("Invalid input; try again")
+
+
+
 play()
 
 #Need a function to run as the main flow for the program i.e. play() 
