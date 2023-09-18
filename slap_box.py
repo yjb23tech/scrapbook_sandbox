@@ -7,7 +7,7 @@ class Player:
         self.int_player_atk_power = 20
 
     def __str__(self):
-        return (f"\nPlease welcome to the stage all the way from {self.str_player_location} our latest Warrior {self.str_player_name}\n")
+        return (f"\nPlease welcome to the stage all the way from {self.str_player_location} our latest Warrior {self.str_player_name}!\n")
 
 def create_player_name():
     ui_player_name = input("\nWhat is your name Warrior?\n")
@@ -18,6 +18,9 @@ def create_player_location():
     return ui_player_location
 
 player_1 = Player(create_player_name(), create_player_location())
-
 print(player_1)
+
+player_2 = Player(create_player_name(), create_player_location())
+print(player_2)
+
 
