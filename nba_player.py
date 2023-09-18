@@ -11,13 +11,20 @@ class NBAPlayer:
 
         return (f"At the {self.str_player_position} position we have: {self.str_player_name}! Attack Power is {self.int_player_attack_power} with a defensive rating of {self.int_player_defense_power}")
 
+#Meta Methods 
+
+def ui_player_name():
+    return (input("\nWhat is the name of your player?\n"))
+
+bool_team_builder_is_on = True
+
 #Test to see if the Class works and can be implemented successfully
-lebron_james = NBAPlayer("LeBron James", "Small Forward", 100, 99)
+test_player = NBAPlayer(ui_player_name(), "Small Forward", 100, 99)
 
 print("")
-print(lebron_james)
+print(test_player)
 print("")
 
 #All of the above was successful! 
 
-
+    
