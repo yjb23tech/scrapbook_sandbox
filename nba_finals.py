@@ -49,6 +49,10 @@ def play():
     else:
         print("Invalid selection; try again!")
 
+    
+    print(arr_nba_east_coast_team)
+    print(arr_nba_west_coast_team)
+    print(" ")
 
 play()
 
