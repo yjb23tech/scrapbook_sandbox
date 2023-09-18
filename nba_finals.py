@@ -24,8 +24,7 @@ def build_nba_team(arr_nba_team, coast_selection, arr_positions):
     print(f"Let's goooooo {coast_selection.upper()} Coast team!\n")
 
 build_nba_team(arr_nba_east_coast_team, "East", arr_nba_positions)
-
-#Need a function for printing a team of 5 starting players 
+build_nba_team(arr_nba_west_coast_team, "West", arr_nba_positions)
 
 #Need a function to run as the main flow for the program i.e. play() 
 
