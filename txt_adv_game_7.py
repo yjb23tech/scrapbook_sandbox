@@ -1,4 +1,4 @@
-#print("This script will attempt to re-create the game as so far as the directions in Chp 7")
+#print("This script will attempt to re-create the game as so far as the directions in Chp 7; will serve as a springboard into Chp 8")
 
 arr_action_options = ['N to travel North', 'E to travel East', 'S to travel South', 'W to travel West', 'I to access your Inventory', 'Q to save and Quit the game']
 arr_inventory_items = ['Dagger', 'Sword', 'Crusty Bread', 'Gold(5)', 'Medical Herbs'] 
