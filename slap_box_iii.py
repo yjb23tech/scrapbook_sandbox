@@ -47,11 +47,11 @@ def pvp(atk_player, def_player):
     print(f"{atk_player.str_player_name} strikes with a force of {atk_player.int_player_atk_power} whilst {def_player.str_player_name} defends with a might of {def_player.int_player_def_power}")
 
     if (pvp_atk_player_atk_power > pvp_def_player_def_power):
-        print(f"The strike from {atk_player.str_player_name} was deadly! He managed to pierce right through the {def_player.str_player_name}'s defences!")
+        print(f"The strike from {atk_player.str_player_name} was deadly! He managed to pierce right through the {def_player.str_player_name}'s defences!\n")
     elif (pvp_atk_player_atk_power < pvp_def_player_def_power):
-        print(f"What a great display of impenetrable defence from {def_player.str_player_name}! {atk_player.str_player_name} simply cannot break through XD")
+        print(f"What a great display of impenetrable defence from {def_player.str_player_name}! {atk_player.str_player_name} simply cannot break through XD\n")
     elif (pvp_atk_player_atk_power == pvp_def_player_def_power):
-        print("Their forces are equal!")
+        print("Their forces are equal!\n")
     else:
         print("Should never be triggered...")
 
@@ -74,7 +74,7 @@ def play():
 
         print(f"Round {loop_counter}! Let's fight!")
         dice_roll_result = int_dice_roll() 
-        print(f"Current score on the die is {dice_roll_result}\n")
+        print(f"Current score on the die is {dice_roll_result}")
 
         if (dice_roll_result % 2 == 0):
             print(f"The score on the die is EVEN so it is {player_2.str_player_name}'s turn to attack!\n")
