@@ -39,6 +39,23 @@ def int_set_player_age():
 def int_dice_roll():
     return (int(random.randint(1,6)))
 
+def pvp(atk_player, def_player):
+
+    pvp_atk_player_atk_power = atk_player.int_atk_power()
+    pvp_def_player_def_power = def_player.int_def_power() 
+
+    print(f"{atk_player.str_player_name} strikes with a force of {atk_player.int_player_atk_power} whilst {def_player.str_player_name} defends with a might of {def_player.int_player_def_power}")
+
+    if (pvp_atk_player_atk_power > pvp_def_player_def_power):
+        print(f"The strike from {atk_player.str_player_name} was deadly! He managed to pierce right through the {def_player.str_player_name}'s defences!")
+    elif (pvp_atk_player_atk_power < pvp_def_player_def_power):
+        print(f"What a great display of impenetrable defence from {def_player.str_player_name}! {atk_player.str_player_name} simply cannot break through XD")
+    elif (pvp_atk_player_atk_power == pvp_def_player_def_power):
+        print("Their forces are equal!")
+    else:
+        print("Should never be triggered...")
+
+
 #Main PLAY() function
 
 def play():
@@ -53,7 +70,7 @@ def play():
 
     loop_counter = 1 
 
-    while (loop_counter < 13):
+    while (loop_counter < 4):
 
         print(f"Round {loop_counter}! Let's fight!")
         dice_roll_result = int_dice_roll() 
@@ -61,8 +78,10 @@ def play():
 
         if (dice_roll_result % 2 == 0):
             print(f"The score on the die is EVEN so it is {player_2.str_player_name}'s turn to attack!\n")
+            pvp(player_2, player_1)
         else:
             print(f"The score on the die is ODD so it is {player_1.str_player_name}'s turn to attack!\n")   
+            pvp(player_1, player_2)
 
         loop_counter += 1 
 
