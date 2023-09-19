@@ -39,9 +39,11 @@ print(player_1)
 print(player_2)
 print(" ")
 
-loop_counter = 0 
+loop_counter = 1 
 
-while (loop_counter < 5):
+while (loop_counter < 6):
+
+    print(f"Let round {loop_counter} begin!")
 
     print(f"{player_1.str_player_name} has an attack power of {player_1.int_atk_power()}")
     print(f"{player_2.str_player_name} has a defensive power of {player_2.int_def_power()}\n")
