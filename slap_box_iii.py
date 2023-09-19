@@ -49,11 +49,16 @@ print("\nWelcome to Paradise Lost - or Hell in Heaven as our friends like to cal
 
 loop_counter = 1 
 
-while (loop_counter < 12):
+while (loop_counter < 13):
 
     print(f"Round {loop_counter}! Let's fight!")
     dice_roll_result = int_dice_roll() 
-    print(f"Current score on the die is {dice_roll_result}\n")   
+    print(f"Current score on the die is {dice_roll_result}\n")
+
+    if (dice_roll_result % 2 == 0):
+        print(f"The score on the die is EVEN so it is {player_2.str_player_name}'s turn to attack!\n")
+    else:
+        print(f"The score on the die is ODD so it is {player_1.str_player_name}'s turn to attack!\n")   
 
     loop_counter += 1 
 
