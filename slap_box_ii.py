@@ -8,10 +8,11 @@ import random
 class Player:
     def __init__(self, str_player_name, str_player_location):
         self.str_player_name = str_player_name
-        self.str_player_location = str_player_location 
+        self.str_player_location = str_player_location
+        self.int_player_hp = 100 
 
     def __str__(self):
-        return (f"\nPlease give a warm welcome to {self.str_player_name} all the way from {self.str_player_location}\n")
+        return (f"Hailing all the way from {self.str_player_location} please put your hands together and give a warm welcome to {self.str_player_name}!")
 
     def int_atk_power(self):
         self.int_player_atk_power = random.randint(1, 20)
@@ -33,12 +34,15 @@ print("\nWelcome to Slap Box ii: Infinity Wars XD")
 player_1 = Player(set_player_name(), set_player_location())
 player_2 = Player(set_player_name(), set_player_location())
 
+print(" ")
 print(player_1)
 print(player_2)
+print(" ")
 
 loop_counter = 0 
 
 while (loop_counter < 5):
+
     print(f"{player_1.str_player_name} has an attack power of {player_1.int_atk_power()}")
     print(f"{player_2.str_player_name} has a defensive power of {player_2.int_def_power()}\n")
 
