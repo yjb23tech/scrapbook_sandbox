@@ -39,4 +39,13 @@ print(player_1)
 player_2 = Player(str_set_player_name(), str_set_player_location(), int_set_player_age())
 print(player_2)
 
-print("Welcome to Paradise Lost - or Hell in Heaven as our friends like to call it XD\n")
+print("\nWelcome to Paradise Lost - or Hell in Heaven as our friends like to call it XD\n")
+
+loop_counter = 1 
+
+while (loop_counter < 6):
+
+    print(f"Round {loop_counter}! Let's fight!")
+    loop_counter += 1 
+
+print(" ")
