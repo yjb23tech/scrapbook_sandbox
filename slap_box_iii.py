@@ -39,27 +39,34 @@ def int_set_player_age():
 def int_dice_roll():
     return (int(random.randint(1,6)))
 
-player_1 = Player(str_set_player_name(), str_set_player_location(), int_set_player_age())
-print(player_1)
+#Main PLAY() function
 
-player_2 = Player(str_set_player_name(), str_set_player_location(), int_set_player_age())
-print(player_2)
+def play():
 
-print("\nWelcome to Paradise Lost - or Hell in Heaven as our friends like to call it XD\n")
+    player_1 = Player(str_set_player_name(), str_set_player_location(), int_set_player_age())
+    print(player_1)
 
-loop_counter = 1 
+    player_2 = Player(str_set_player_name(), str_set_player_location(), int_set_player_age())
+    print(player_2)
 
-while (loop_counter < 13):
+    print("\nWelcome to Paradise Lost - or Hell in Heaven as our friends like to call it XD\n")
 
-    print(f"Round {loop_counter}! Let's fight!")
-    dice_roll_result = int_dice_roll() 
-    print(f"Current score on the die is {dice_roll_result}\n")
+    loop_counter = 1 
 
-    if (dice_roll_result % 2 == 0):
-        print(f"The score on the die is EVEN so it is {player_2.str_player_name}'s turn to attack!\n")
-    else:
-        print(f"The score on the die is ODD so it is {player_1.str_player_name}'s turn to attack!\n")   
+    while (loop_counter < 13):
 
-    loop_counter += 1 
+        print(f"Round {loop_counter}! Let's fight!")
+        dice_roll_result = int_dice_roll() 
+        print(f"Current score on the die is {dice_roll_result}\n")
 
-print(" ")
+        if (dice_roll_result % 2 == 0):
+            print(f"The score on the die is EVEN so it is {player_2.str_player_name}'s turn to attack!\n")
+        else:
+            print(f"The score on the die is ODD so it is {player_1.str_player_name}'s turn to attack!\n")   
+
+        loop_counter += 1 
+
+    print(" ")
+
+play()
+
