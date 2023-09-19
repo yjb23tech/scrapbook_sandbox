@@ -8,6 +8,7 @@ class Player:
         self.str_player_name = str_player_name
         self.str_player_location = str_player_location 
         self.int_player_age = int_player_age
+        self.int_player_hp = 100 
         self.int_player_atk_power = 1 
         self.int_player_def_power = 1  
 
@@ -23,7 +24,6 @@ class Player:
         return self.int_player_def_power 
 
 #Meta methods 
-
 def str_set_player_name():
     return (input(f"\nWhat is your name Warrior?\n"))
 
@@ -34,7 +34,9 @@ def int_set_player_age():
     return (int(input(f"\nAnd how old are you Warrior?\n")))
 
 player_1 = Player(str_set_player_name(), str_set_player_location(), int_set_player_age())
-
 print(player_1)
 
-print("How far can you take it?")
+player_2 = Player(str_set_player_name(), str_set_player_location(), int_set_player_age())
+print(player_2)
+
+print("Welcome to Paradise Lost - or Hell in Heaven as our friends like to call it XD\n")
