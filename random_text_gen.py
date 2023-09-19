@@ -5,4 +5,8 @@
 arr_atk_wins_text = ['shattering blow', 'devastating shot to the liver', 'gut wrenching strike to the solar plexus', 'vicious slash', 'critical slam'] 
 arr_def_wins_text = ['managed to successfully evade', 'intercepted and then parried', 'deflected and reversed', 'managed to block', 'defend against'] 
 
+for txt in arr_atk_wins_text:
+    print(f"The Blacker panther lands a {txt} on the Amazing Spider Man")
+
+ 
 
