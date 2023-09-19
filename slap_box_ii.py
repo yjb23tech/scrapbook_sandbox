@@ -24,12 +24,18 @@ class Player:
         self.int_player_def_power = random.randint(1, 20)
         return self.int_player_def_power 
 
+#My meta methods
 def set_player_name():
     return (input("\nWhat is your name Warrior?\n"))
 
 def set_player_location():
     return (input("\nWhere are you from Warrior?\n"))
 
+
+#My functions
+def action_dice_roll():
+    dice_roll_result = random.randint(1, 6)
+    return dice_roll_result
 
 print("\nWelcome to Slap Box ii: Infinity Wars XD")
 
@@ -51,6 +57,8 @@ while (loop_counter < 6):
 
     if (player_1.int_player_atk_power > player_2.int_player_def_power):
         print(f"{player_1.str_player_name} has overwhelmed {player_2.str_player_name} with tremendous force! The damage is severe!")
+        player_2.int_player_hp = player_2.int_player_hp - player_1.int_player_atk_power
+        print(f"{player_2.str_player_name} only has {player_2.int_player_hp} health points remaining! Death draws nearer!")
     elif (player_1.int_player_atk_power < player_2.int_player_def_power):
         print(f"{player_2.str_player_name} is a fortress! {player_1.str_player_name} cannot crack through the impenetrable defense!")
     else:
