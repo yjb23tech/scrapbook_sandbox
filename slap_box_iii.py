@@ -3,6 +3,7 @@
 #Might consider atk power ups, def boosts, magic and spells...
 
 import random
+import random_text_gen
 
 class Player:
 
@@ -47,9 +48,11 @@ def pvp(atk_player, def_player):
     print(f"{atk_player.str_player_name} strikes with a force of {atk_player.int_player_atk_power} whilst {def_player.str_player_name} defends with a might of {def_player.int_player_def_power}")
 
     if (pvp_atk_player_atk_power > pvp_def_player_def_power):
+        print(f"{atk_player.str_player_name} has landed a {random_text_gen.str_random_txt_gen(True)} on the {def_player.str_player_name}!\n")
         print(f"The strike from {atk_player.str_player_name} was deadly! He managed to pierce right through the {def_player.str_player_name}'s defences!\n")
     elif (pvp_atk_player_atk_power < pvp_def_player_def_power):
-        print(f"What a great display of impenetrable defence from {def_player.str_player_name}! {atk_player.str_player_name} simply cannot break through XD\n")
+        print(f"In a shocking turn of events {def_player.str_player_name} has {random_text_gen.str_random_txt_gen(False)} the attack from {atk_player.str_player_name}")
+        print(f"What a great display of impenentrable defence from {def_player.str_player_name}! {atk_player.str_player_name} simply cannot break through XD\n")
     elif (pvp_atk_player_atk_power == pvp_def_player_def_power):
         print("Their forces are equal!\n")
     else:
@@ -70,7 +73,7 @@ def play():
 
     loop_counter = 1 
 
-    while (loop_counter < 4):
+    while (loop_counter < 10):
 
         print(f"Round {loop_counter}! Let's fight!")
         dice_roll_result = int_dice_roll() 
@@ -88,4 +91,9 @@ def play():
     print(" ")
 
 play()
+
+for txt in random_text_gen.arr_atk_wins_text:
+    print(f"The Amazing Spider Man lands a {txt} on The Incredible Hulk")
+
+
 
