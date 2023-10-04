@@ -7,6 +7,35 @@ arr_world_map = [
     [Tile(2, 0, "South East", "Whole Cake Island"), Tile(2, 1, "East", "Thriller Bark"), Tile(2, 2, "North East", "Wano")]
 ]
 
+dict_vector_movements_in_y_plane = {
+
+    0: {
+
+        -1: "South", 
+        0: "Stay", 
+        1: "North"
+    }
+}
+
+dict_vector_movements_in_x_plane = {
+
+    -1: {
+
+        0: "West"
+    },
+
+    0: {
+
+        0: "No Movement"
+    }, 
+
+    1: {
+
+        0: "East"
+    }
+
+
+}
 user_player = Player("Luffy", 1, 1)
 
 print(" ")
@@ -21,10 +50,15 @@ print(f"You Captain {user_player.str_name} are currently on {arr_world_map[user_
 for x in range(1):
     for y in range(-1, 2):
         print(f"{x}, {y}")
+        print(f"{dict_vector_movements_in_y_plane[x][y]}\n")
+
 
 #models universal vector movements in the x plane 
 for x in range(-1, 2):
     for y in range(1):
         print(f"{x}, {y}")
+        print(f"{dict_vector_movements_in_x_plane[x][y]}\n")
+
+
 
 
