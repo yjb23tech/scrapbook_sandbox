@@ -1,4 +1,4 @@
-from modelling_classes import Tile
+from modelling_classes import Tile, Player 
 
 arr_world_map = [
 
@@ -7,10 +7,15 @@ arr_world_map = [
     [Tile(2, 0, "South East", "Whole Cake Island"), Tile(2, 1, "East", "Thriller Bark"), Tile(2, 2, "North East", "Wano")]
 ]
 
+user_player = Player("Luffy", 1, 1)
+
 print(" ")
 for x in range(len(arr_world_map)):
     for y in range(len(arr_world_map)):
         print(arr_world_map[x][y])
 print(" ")
+
+print(f"You Captain {user_player.str_name} are currently on {arr_world_map[user_player.int_loc_x][user_player.int_loc_y]}")
+
 
 
