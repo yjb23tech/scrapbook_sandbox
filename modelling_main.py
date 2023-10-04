@@ -15,7 +15,16 @@ for x in range(len(arr_world_map)):
         print(arr_world_map[x][y])
 print(" ")
 
-print(f"You Captain {user_player.str_name} are currently on {arr_world_map[user_player.int_loc_x][user_player.int_loc_y]}")
+print(f"You Captain {user_player.str_name} are currently on {arr_world_map[user_player.int_loc_x][user_player.int_loc_y]}\n")
 
+#models universal vector movements in the y plane
+for x in range(1):
+    for y in range(-1, 2):
+        print(f"{x}, {y}")
+
+#models universal vector movements in the x plane 
+for x in range(-1, 2):
+    for y in range(1):
+        print(f"{x}, {y}")
 
 
