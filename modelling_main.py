@@ -66,7 +66,10 @@ for x in range(1):
 
             #print(f"You can travel {dict_vector_movements_in_y_plane[x][y]} and dock your ship on {valid_tile.str_name}\n")
             str_valid_direction_y = dict_vector_movements_in_y_plane[x][y]
-            arr_valid_travel_directions.append(str_valid_direction_y)
+            if str_valid_direction_y == 'Stay':
+                #do nothing
+            else:
+                arr_valid_travel_directions.append(str_valid_direction_y)
         except IndexError:
 
             #print(f"No you cannot travel {dict_vector_movements_in_y_plane[x][y]}")
@@ -93,7 +96,10 @@ for x in range(-1, 2):
 
             #print(f"You can travel {dict_vector_movements_in_x_plane[x][y]} and dock your ship on {valid_tile.str_name}\n")
             str_valid_direction_x = dict_vector_movements_in_x_plane[x][y]
-            arr_valid_travel_directions.append(str_valid_direction_x)
+            if str_valid_direction_x == 'No Movement':
+                #Do nothing
+            else:
+                arr_valid_travel_directions.append(str_valid_direction_x)
         except IndexError:
 
             #print(f"No you cannot travel {dict_vector_movements_in_x_plane[x][y]}")
