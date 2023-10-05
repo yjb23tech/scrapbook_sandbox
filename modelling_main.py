@@ -36,7 +36,8 @@ dict_vector_movements_in_x_plane = {
 
 
 }
-user_player = Player("Luffy", 1, 1)
+
+user_player = Player("Luffy", 0, 2)
 
 print(" ")
 for x in range(len(arr_world_map)):
@@ -46,18 +47,52 @@ print(" ")
 
 print(f"You Captain {user_player.str_name} are currently on {arr_world_map[user_player.int_loc_x][user_player.int_loc_y]}\n")
 
+arr_invalid_travel_directions = []
+
 #models universal vector movements in the y plane
 for x in range(1):
     for y in range(-1, 2):
         print(f"{x}, {y}")
-        print(f"Can you travel {dict_vector_movements_in_y_plane[x][y]}?\n")
+        print(f"Can you travel {dict_vector_movements_in_y_plane[x][y]}?")
+        try:
+            a = user_player.int_loc_x + x 
+            b = user_player.int_loc_y + y 
 
+            print(f"This is a: {a}")
+            print(f"This is b: {b}")
 
+            if b < 0:
+                raise IndexError 
+            
+            valid_tile = arr_world_map[a][b]
+            print(f"You can travel {dict_vector_movements_in_y_plane[x][y]} and dock your ship on {valid_tile.str_name}\n")
+        except IndexError:
+
+            print(f"No you cannot travel {dict_vector_movements_in_y_plane[x][y]}")
+            str_invalid_direction = dict_vector_movements_in_y_plane[x][y]
+            arr_invalid_travel_directions.append(str_invalid_direction)
+
+print(" ")
 #models universal vector movements in the x plane 
 for x in range(-1, 2):
     for y in range(1):
         print(f"{x}, {y}")
         print(f"Can you travel {dict_vector_movements_in_x_plane[x][y]}?\n")
+        try:
+            a = user_player.int_loc_x + x 
+            b = user_player.int_loc_y + y 
+
+            print(f"This is a: {a}")
+            print(f"This is b: {b}")
+
+            if a < 0:
+                raise IndexError
+            
+            valid_tile = arr_world_map[a][b]
+            print(f"You can travel {dict_vector_movements_in_x_plane[x][y]} and dock your ship on {valid_tile.str_name}\n")
+        except IndexError:
+            print(f"No you cannot travel {dict_vector_movements_in_x_plane[x][y]}")
+
 
 
 
