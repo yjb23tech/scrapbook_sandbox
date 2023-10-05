@@ -37,7 +37,7 @@ dict_vector_movements_in_x_plane = {
 
 }
 
-user_player = Player("Luffy", 0, 2)
+user_player = Player("Luffy", 0, 0)
 
 print(" ")
 for x in range(len(arr_world_map)):
@@ -76,8 +76,8 @@ print(" ")
 #models universal vector movements in the x plane 
 for x in range(-1, 2):
     for y in range(1):
-        print(f"{x}, {y}")
-        print(f"Can you travel {dict_vector_movements_in_x_plane[x][y]}?\n")
+        print(f"\n{x}, {y}")
+        print(f"Can you travel {dict_vector_movements_in_x_plane[x][y]}?")
         try:
             a = user_player.int_loc_x + x 
             b = user_player.int_loc_y + y 
