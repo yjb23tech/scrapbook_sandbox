@@ -37,15 +37,13 @@ dict_vector_movements_in_x_plane = {
 
 }
 
-user_player = Player("Luffy", 2, 0)
+user_player = Player("Luffy", 0, 0)
 
 print(" ")
 for x in range(len(arr_world_map)):
     for y in range(len(arr_world_map)):
         print(arr_world_map[x][y])
 print(" ")
-
-print(f"You Captain {user_player.str_name} are currently on {arr_world_map[user_player.int_loc_x][user_player.int_loc_y]}\n")
 
 arr_valid_travel_directions = []
 arr_invalid_travel_directions = []
@@ -101,6 +99,19 @@ for x in range(-1, 2):
             #print(f"No you cannot travel {dict_vector_movements_in_x_plane[x][y]}")
             str_invalid_direction_x = dict_vector_movements_in_x_plane[x][y]
             arr_invalid_travel_directions.append(str_invalid_direction_x)
+
+
+print(f"Captain {user_player.str_name}! You are currently on {arr_world_map[user_player.int_loc_x][user_player.int_loc_y]} and can travel in the following directions:\n")
+i = 1
+for valid_direction in arr_valid_travel_directions:
+    print(f"{i}. {valid_direction}")
+    i += 1 
+print(" ")
+
+print("You cannot travel in the following directions:\n")
+for z, invalid_direction in enumerate(arr_invalid_travel_directions, 1):
+    print(f"{z}. {invalid_direction}")
+print(" ")
 
 
 
