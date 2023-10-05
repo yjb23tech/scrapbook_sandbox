@@ -47,13 +47,14 @@ print(" ")
 
 print(f"You Captain {user_player.str_name} are currently on {arr_world_map[user_player.int_loc_x][user_player.int_loc_y]}\n")
 
+arr_valid_travel_directions = []
 arr_invalid_travel_directions = []
 
 #models universal vector movements in the y plane
 for x in range(1):
     for y in range(-1, 2):
-        print(f"{x}, {y}")
-        print(f"Can you travel {dict_vector_movements_in_y_plane[x][y]}?")
+        #print(f"{x}, {y}")
+        #print(f"Can you travel {dict_vector_movements_in_y_plane[x][y]}?")
         try:
             a = user_player.int_loc_x + x 
             b = user_player.int_loc_y + y 
@@ -65,19 +66,23 @@ for x in range(1):
                 raise IndexError 
             
             valid_tile = arr_world_map[a][b]
-            print(f"You can travel {dict_vector_movements_in_y_plane[x][y]} and dock your ship on {valid_tile.str_name}\n")
+
+            #print(f"You can travel {dict_vector_movements_in_y_plane[x][y]} and dock your ship on {valid_tile.str_name}\n")
+            str_valid_direction_y = dict_vector_movements_in_y_plane[x][y]
+            arr_valid_travel_directions.append(str_valid_direction_y)
         except IndexError:
 
-            print(f"No you cannot travel {dict_vector_movements_in_y_plane[x][y]}")
-            str_invalid_direction = dict_vector_movements_in_y_plane[x][y]
-            arr_invalid_travel_directions.append(str_invalid_direction)
+            #print(f"No you cannot travel {dict_vector_movements_in_y_plane[x][y]}")
+            str_invalid_direction_y = dict_vector_movements_in_y_plane[x][y]
+            arr_invalid_travel_directions.append(str_invalid_direction_y)
+
 
 print(" ")
 #models universal vector movements in the x plane 
 for x in range(-1, 2):
     for y in range(1):
-        print(f"\n{x}, {y}")
-        print(f"Can you travel {dict_vector_movements_in_x_plane[x][y]}?")
+        #print(f"\n{x}, {y}")
+        #print(f"Can you travel {dict_vector_movements_in_x_plane[x][y]}?")
         try:
             a = user_player.int_loc_x + x 
             b = user_player.int_loc_y + y 
@@ -89,9 +94,15 @@ for x in range(-1, 2):
                 raise IndexError
             
             valid_tile = arr_world_map[a][b]
-            print(f"You can travel {dict_vector_movements_in_x_plane[x][y]} and dock your ship on {valid_tile.str_name}\n")
+
+            #print(f"You can travel {dict_vector_movements_in_x_plane[x][y]} and dock your ship on {valid_tile.str_name}\n")
+            str_valid_direction_x = dict_vector_movements_in_x_plane[x][y]
+            arr_valid_travel_directions.append(str_valid_direction_x)
         except IndexError:
-            print(f"No you cannot travel {dict_vector_movements_in_x_plane[x][y]}")
+
+            #print(f"No you cannot travel {dict_vector_movements_in_x_plane[x][y]}")
+            str_invalid_direction_x = dict_vector_movements_in_x_plane[x][y]
+            arr_invalid_travel_directions.append(str_invalid_direction_x)
 
 
 
