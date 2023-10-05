@@ -59,8 +59,7 @@ for x in range(1):
             a = user_player.int_loc_x + x 
             b = user_player.int_loc_y + y 
 
-            print(f"This is a: {a}")
-            print(f"This is b: {b}")
+            #print(f"New tile coordinates to be validated: [{a}, {b}]")
 
             if b < 0:
                 raise IndexError 
@@ -87,8 +86,7 @@ for x in range(-1, 2):
             a = user_player.int_loc_x + x 
             b = user_player.int_loc_y + y 
 
-            print(f"This is a: {a}")
-            print(f"This is b: {b}")
+            #print(f"New tile coordinates to be validated: [{a},{b}]")
 
             if a < 0:
                 raise IndexError
