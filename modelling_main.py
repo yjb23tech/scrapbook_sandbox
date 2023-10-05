@@ -37,7 +37,7 @@ dict_vector_movements_in_x_plane = {
 
 }
 
-user_player = Player("Luffy", 2, 0)
+user_player = Player("Luffy", 2, 2)
 
 print(" ")
 for x in range(len(arr_world_map)):
