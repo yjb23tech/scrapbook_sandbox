@@ -8,4 +8,5 @@ for k, v in gordon_gekko.items():
     print(f"\n{k}")
     print(f"{v}\n")
 
+print("SPotty")
 
